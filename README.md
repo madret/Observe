@@ -94,9 +94,38 @@ Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.ht
 
 ![Picture1](https://github.com/user-attachments/assets/554871e3-a24d-4bcd-8295-d41011bf3ccc)
 
-## Build dashboarding
+The Observe agent for WINOS in our case uses the Windows Event Log Receiver which tails and parses logs from windows event log API using the **opentelemetry-log-collection library**.
+The Windows EventLog (EVTX) format is XML and is used by Microsoft Windows, as of Windows Vista, to store system log information. The EVTX format supersedes the Windows EventLog (EVT) format as used in Windows XP.
 
-### OPAL reference guid
+By default i'm not receiving the desired field extractions, I haven't got time to dive into potential parsers out there and haven't build any myself (yet). For a quick win and to get started the following regex for OPAL can be used:
+```
+extract_regex Body, /"channel":"(?P<channel>[^"]+)"/
+extract_regex Body, /"level":"(?P<level>[^"]+)"/
+extract_regex Body, /"event_source":"(?P<event_source>[^"]+)"/
+extract_regex Body, /"data":\[(?P<data>[^\]]+)\]/
+extract_regex Body, /"name":"(?P<name>[^"]+)"/
+extract_regex Body, /"Account Name":"(?P<account_name>[^"]+)"/
+extract_regex Body, /"Logon Type":"(?P<logon_type>[^"]+)"/
+extract_regex Body, /"ImagePath":"(?P<image_path>[^"]+)"/
+extract_regex Body, /"Object Name":"(?P<object_name>[^"]+)"/
+extract_regex Body, /"Process Name":"(?P<process_name>[^"]+)"/
+extract_regex Body, /"message":"(?P<message>[^"]+)"/
+extract_regex Body, /"Logon Process":"(?P<LogonProcess>[^"]+)"/
+extract_regex Body, /"Authentication Package":"(?P<authentication_package>[^"]+)"/
+extract_regex Body, /"event_id":\{"id":(?P<event_id>\d+)/
+extract_regex Body, /"Caller Process Name":"(?P<caller_process_name>[^"]+)"/
+extract_regex Body, /"keywords":\[(?P<keywords>[^\]]+)\]/
+extract_regex Body, /"Source Network Address":"(?P<src_ip>[^"]+)"/
+extract_regex Body, /(?P<ip_address>(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))/
+```
+
+
+## Build dashboarding
+Dashboards are a convenient way to visualize important data in one place.
+
+Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDashboards.html#creating-a-new-dashboard 
+
+### OPAL reference guide
 
 #### Regex
 
