@@ -141,7 +141,8 @@ Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDa
 
 ### OPAL reference guide
 - OPAL — Observe Processing and Analysis Language
-- Documentation: https://docs.observeinc.com/en/latest/content/query-language-reference/index.html 
+
+Documentation: https://docs.observeinc.com/en/latest/content/query-language-reference/index.html 
 
 ## Create Alerts & Monitors
 Documentation: https://docs.observeinc.com/en/latest/content/alerting/AlertingIntro.html
