@@ -7,6 +7,19 @@ Observe ingests event data using datastreams. Once ingested, all event data asso
 ## Datasets
 Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data. Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data.
 
+## Concepts & Architecture
+The key concepts of Observe by reading the documentation allows us to perform the following tasks:
+
+- Ingesting data into the Observe data lake using datastreams.
+- Exploring the data that is in Observe.
+- Live incident debugging using Live Mode.
+- Visualizing data and presenting on dashboards.
+- Using dashboards to view and filter datasets.
+- Navigating between related datasets using GraphLink.
+- Using worksheets and Observe Processing Analytics Language (OPAL) for manipulating event data.
+- Installing Observe applications.
+- Using the Dataset Graph feature to understand datasets and the relationships between them.
+
 ![architecture-diagram](https://github.com/user-attachments/assets/f0645406-c834-4cc2-8728-e857cc2831cb)
 
 
