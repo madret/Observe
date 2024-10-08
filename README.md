@@ -26,10 +26,18 @@ Observe helps you quickly start monitoring the health and activity of your serve
 - A simple health dashboard to monitor the health of the otelcol agent installed on your server.
 
 ## 2. Install observe agent
-Scope: Windows OS
+*Scope:* Windows OS
+Install the agent on the desired endpoint (e.g. server, windows VM, etc).
 
-### WINOS Install
-Install the observe-agent package via the provided installation powershell script. This script needs to be run in a powershell terminal that you run as administrator. Replace `OBSERVE_TOKEN` and `OBSERVE_COLLECTION_ENDPOINT` with the appropriate values and run on each host.
+The Observe Agent, built on OpenTelemetry Collector, runs on your hosts and in your architecture to collect logs, metrics, traces, and events and sends them to Observe.
+#### System requirements (WINOS)
+Port 8888 should be open for HTTP connections from localhost (network access is not required). This port is used by the agent to monitor itself and the status command will not work if it is blocked.
+The Observe Agent for WINOS supports x86_64 and arm64 architectures and the following platforms:
+- Windows Server 2016+
+- Windows 10
+
+### WINOS Install process
+Install the observe-agent package via the provided installation powershell script. This script needs to be run in an elevated prompt (run as administrator). Replace `OBSERVE_TOKEN` and `OBSERVE_COLLECTION_ENDPOINT` with the appropriate values and run on each host.
 
 ```
 [Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"
