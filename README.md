@@ -30,7 +30,7 @@ The key concepts of Observe, according to the documentation, are enabling the fo
 
 ## 1. Host quickstart
 The Host Quick Start Integration is the simplest way to start monitoring your Linux and Windows endpoints in Observe. It is designed to quickly surface logs and metrics information in our Log and Metric explorers.
-The package uses the Observe Agent for Linux and Windows, and OpenTelemetry Collector with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
+The package uses the **Observe Agent for Linux and Windows**, and **OpenTelemetry Collector [1]** with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
 The install is designed to be simple and light weight to simplify the process.
 The instructions are located in a public git hub repository and are also provided (with pre-populated parameters to make it work for your Observe instance) within the Configuration panel of our UI based install for the app. 
 
@@ -41,10 +41,12 @@ Observe helps you quickly start monitoring the health and activity of your serve
 - A simple home dashboard that shows high level logs and metrics with links to our log, metric and resource explorers.
 - A simple health dashboard to monitor the health of the otelcol agent installed on your server.
 
+[1] https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/windowseventlogreceiver/README.md
+
 ## 2. Install observe agent
 - Scope: Windows OS
 
-The Observe agent, built on OpenTelemtry Collector can also be installed on Linux and MACOS but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
+The Observe agent, built on OpenTelemtry Collector can also be installed on Linux but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
 
 #### System requirements (WINOS)
 Port 8888 should be open for HTTP connections from localhost (network access is not required). This port is used by the agent to monitor itself and the status command will not work if it is blocked.
@@ -70,7 +72,7 @@ PS C:\Program Files\Observe\observe-agent> ./observe-agent status
 Remove-Item -Recurse "${Env:Programfiles}\Observe"
 ```
 
-## Explore and verify Logs
+## 3. Explore and verify Log ingestion
 Log Explorer displays a list of available Log Datasets logs. If you don’t see the desired Datasets, use the **Search** function to locate it.
 The left menu also displays a list of **Filters** to use with the currently selected **Logs dataset**. When you select a Filter, the Filter appears in the **Query Builder**.
 In the center panel, you can build filters using the Query Builder and select from a dropdown list of parameters, or you can select **OPAL** and use OPAL to build your filter list.
@@ -79,3 +81,5 @@ By default, Log Explorer will show data in **Raw format** as log events. Selecti
 You can use column formatting tools to **filter, sort, and visualize** the data. Use a context-click on the column header to display options for working with data in a single column. The available options depend on the data type in the column. Refer to the Observe documentation.
 
 Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.html#log-explorer-overview 
+
+
