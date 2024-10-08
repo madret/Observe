@@ -131,8 +131,9 @@ Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDa
 
 ## Create Alerts & Monitors
 
+#### Observe documentation
+https://docs.observeinc.com/en/latest/ 
+
 # Disclaimer
 This repo is work in progress, i'm a Observe user for two days now. Feel free to connect with questions or suggestions.
 
-#### Observe documentation
-https://docs.observeinc.com/en/latest/ 
