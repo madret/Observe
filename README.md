@@ -83,7 +83,7 @@ You can use column formatting tools to **filter, sort, and visualize** the data.
 
 Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.html#log-explorer-overview 
 
-# Parse, extract and play around with our data
+# Parse, extract and interact with our data
 
 ## Regex
 
