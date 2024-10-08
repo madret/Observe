@@ -99,6 +99,7 @@ The Windows EventLog (EVTX) format is XML and is used by Microsoft Windows, as o
 
 By default i'm not receiving the desired field extractions, i'm not aware of any potential wineventlog parsers out there and haven't build any myself (yet). 
 Currently out of the box the entire windows event is in the body of the Log entry:
+
 ![image](https://github.com/user-attachments/assets/fcdde86e-4465-4b8c-9412-aab97384b031)
 
 For a quick win and to get started with interacting with eventlog data, extract fields with the following regex for OPAL syntax:
@@ -129,13 +130,18 @@ Reference #2: https://github.com/open-telemetry/opentelemetry-collector-contrib/
 ## Dashboarding
 Dashboards are a convenient way to visualize important data in one place.
 
+### Dashboard code
+```
+<TBD>
+```
+
 Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDashboards.html#creating-a-new-dashboard 
 
 ### OPAL reference guide
-
-#### Regex
+Documentation: https://docs.observeinc.com/en/latest/content/query-language-reference/index.html 
 
 ## Create Alerts & Monitors
+Documentation: https://docs.observeinc.com/en/latest/content/alerting/AlertingIntro.html
 
 #### Observe documentation
 https://docs.observeinc.com/en/latest/ 
