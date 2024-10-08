@@ -24,6 +24,7 @@ The key concepts of Observe, according to the documentation, are enabling the fo
 
 
 # Goal: Building an Observe intance with SIEM capabilities
+- Security information and event management (SIEM)
 
 ## Requirements
 - Setup free Observe trial: https://account.observeinc.com/
