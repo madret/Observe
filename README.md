@@ -7,8 +7,8 @@ Observe ingests event data using datastreams. Once ingested, all event data asso
 ## Datasets
 Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data. Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data.
 
-## Concepts & Architecture
-The key concepts of Observe by reading the documentation allows us to perform the following tasks:
+## Key Concepts & Architecture
+The key concepts of Observe, according to the documentation, are enabling the following tasks:
 
 - Ingesting data into the Observe data lake using datastreams.
 - Exploring the data that is in Observe.
