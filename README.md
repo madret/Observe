@@ -84,6 +84,7 @@ You can use column formatting tools to **filter, sort, and visualize** the data.
 Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.html#log-explorer-overview 
 
 # Parse, extract and interact with our data
+![image](https://github.com/user-attachments/assets/1d13c794-b744-4832-9682-1dfdf9232a05)
 
 ## Regex
 
