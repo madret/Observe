@@ -37,12 +37,12 @@ Read more: https://www.observeinc.com/about-us/
 3. Verify log ingestion
 
 ## 1. Host Quickstart
-The Host Quick Start Integration is the simplest way to start monitoring your Linux and Windows endpoints in Observe. It is designed to quickly surface logs and metrics information in our Log and Metric explorers.
+The Host Quick Start Integration is the simplest way to start monitoring Linux and Windows endpoints in Observe. It is designed to quickly surface logs and metrics information in the Log and Metric explorers.
 The package uses the **Observe Agent for Linux and Windows**, and **OpenTelemetry Collector [1]** with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
-The install is designed to be simple and light weight to simplify the process.
-The instructions are located in a public git hub repository and are also provided (with pre-populated parameters to make it work for your Observe instance) within the Configuration panel of our UI based install for the app. 
 
-Observe helps you quickly start monitoring the health and activity of your servers with the following features:
+The instructions are located in a public github repository and are also provided (with pre-populated parameters to make it work for your Observe instance) within the Configuration panel of our UI based install for the app. 
+
+Observe helps monitoring the health and activity of your servers with the following features:
 - A logs dataset (Logs) with log files being shipped from your host.
 - A metrics dataset (Metrics) with common host metrics collected from your host.
 - A resource dataset (Source) to quickly show you the hosts your are monitoring that links to associated logs and metrics.
@@ -54,7 +54,7 @@ Observe helps you quickly start monitoring the health and activity of your serve
 ## 2. Install observe agent
 - Scope: Windows OS
 
-The Observe agent, built on OpenTelemtry Collector can also be installed on Linux but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
+The Observe agent, built on OpenTelemetry Collector can also be installed on Linux but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
 
 #### System requirements (WINOS)
 Port 8888 should be open for HTTP connections from localhost (network access is not required). This port is used by the agent to monitor itself and the status command will not work if it is blocked.
@@ -96,11 +96,11 @@ Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.ht
 
 ![Picture1](https://github.com/user-attachments/assets/554871e3-a24d-4bcd-8295-d41011bf3ccc)
 
-The Observe agent for WINOS in our case uses the Windows Event Log Receiver which tails and parses logs from windows event log API using the **opentelemetry-log-collection library**.
+The Observe agent for WINOS in my case uses the Windows Event Log Receiver which tails and parses logs from windows event log API using the **opentelemetry-log-collection library**.
 The Windows EventLog (EVTX) format is XML and is used by Microsoft Windows, as of Windows Vista, to store system log information. The EVTX format supersedes the Windows EventLog (EVT) format as used in Windows XP.
 
 By default i'm not receiving the desired field extractions, i'm not aware of any potential wineventlog parsers out there and haven't build any myself (yet). 
-Currently out of the box the entire windows event is in the body of the Log entry:
+Currently out of the box the entire windows event is in the Body of the Log entry:
 
 ![image](https://github.com/user-attachments/assets/fcdde86e-4465-4b8c-9412-aab97384b031)
 
