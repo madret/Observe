@@ -70,4 +70,11 @@ PS C:\Program Files\Observe\observe-agent> ./observe-agent status
 Remove-Item -Recurse "${Env:Programfiles}\Observe"
 ```
 
-## 
+## Explore and verify Logs
+Log Explorer displays a list of available Log Datasets logs. If you don’t see the desired Datasets, use the Search function to locate it.
+The left menu also displays a list of Filters to use with the currently selected Logs dataset. When you select a Filter, the Filter appears in the Query Builder.
+In the center panel, you can build filters using the Query Builder and select from a dropdown list of parameters, or you can select OPAL and use OPAL to build your filter list.
+By default, Log Explorer will show data in Raw format as log events. Selecting a row from the list of Logs displays details of the log in the right panel.
+You can use column formatting tools to filter, sort, and visualize the data. Use a context-click on the column header to display options for working with data in a single column. The available options depend on the data type in the column. Refer to the Observe documentation.
+
+Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.html#log-explorer-overview 
