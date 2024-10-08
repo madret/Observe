@@ -29,7 +29,12 @@ The key concepts of Observe, according to the documentation, are enabling the fo
 ## Requirements
 - Setup free Observe trial: https://account.observeinc.com/
 
-## 1. Host quickstart
+## Installation steps
+1. Host Quickstart
+2. Install Observe agent
+3. Verify log ingestion
+
+## 1. Host Quickstart
 The Host Quick Start Integration is the simplest way to start monitoring your Linux and Windows endpoints in Observe. It is designed to quickly surface logs and metrics information in our Log and Metric explorers.
 The package uses the **Observe Agent for Linux and Windows**, and **OpenTelemetry Collector [1]** with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
 The install is designed to be simple and light weight to simplify the process.
