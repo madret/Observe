@@ -120,7 +120,7 @@ extract_regex Body, /(?P<ip_address>(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[
 ```
 
 
-## Build dashboarding
+## Dashboarding
 Dashboards are a convenient way to visualize important data in one place.
 
 Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDashboards.html#creating-a-new-dashboard 
@@ -131,6 +131,8 @@ Documentation: https://docs.observeinc.com/en/latest/content/dashboards/CreateDa
 
 ## Create Alerts & Monitors
 
+# Disclaimer
+This repo is work in progress, i'm a Observe user for two days now. Feel free to connect with questions or suggestions.
 
 #### Observe documentation
 https://docs.observeinc.com/en/latest/ 
