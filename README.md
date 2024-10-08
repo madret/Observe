@@ -126,8 +126,8 @@ extract_regex Body, /"Source Network Address":"(?P<src_ip>[^"]+)"/
 extract_regex Body, /(?P<ip_address>(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))/
 ```
 
-Reference #1: https://github.com/open-telemetry/opentelemetry-log-collection/blob/main/docs/types/field.md 
-Reference #2: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.110.0/receiver/windowseventlogreceiver 
+- Reference #1: https://github.com/open-telemetry/opentelemetry-log-collection/blob/main/docs/types/field.md
+- Reference #2: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.110.0/receiver/windowseventlogreceiver 
 
 ## Dashboarding
 Dashboards are a convenient way to visualize important data in one place.
