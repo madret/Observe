@@ -26,10 +26,10 @@ Observe helps you quickly start monitoring the health and activity of your serve
 - A simple health dashboard to monitor the health of the otelcol agent installed on your server.
 
 ## 2. Install observe agent
-*Scope:* Windows OS
-Install the agent on the desired endpoint (e.g. server, windows VM, etc).
-
+- Scope: Windows OS
+The Observe agent can also be installed installed on Linux and MACOS but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
 The Observe Agent, built on OpenTelemetry Collector, runs on your hosts and in your architecture to collect logs, metrics, traces, and events and sends them to Observe.
+
 #### System requirements (WINOS)
 Port 8888 should be open for HTTP connections from localhost (network access is not required). This port is used by the agent to monitor itself and the status command will not work if it is blocked.
 The Observe Agent for WINOS supports x86_64 and arm64 architectures and the following platforms:
