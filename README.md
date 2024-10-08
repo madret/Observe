@@ -104,7 +104,7 @@ Currently out of the box the entire windows event is in the body of the Log entr
 
 ![image](https://github.com/user-attachments/assets/fcdde86e-4465-4b8c-9412-aab97384b031)
 
-For a quick win and to get started interacting with eventlog data, extract fields with the following regex for OPAL syntax:
+For a quick win and to get started interacting with eventlog data (JSON format in the body field), extract fields with the following regex for OPAL syntax:
 ```
 extract_regex Body, /"channel":"(?P<channel>[^"]+)"/
 extract_regex Body, /"level":"(?P<level>[^"]+)"/
