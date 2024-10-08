@@ -97,7 +97,11 @@ Documentation: https://docs.observeinc.com/en/latest/content/logs/LogExplorer.ht
 The Observe agent for WINOS in our case uses the Windows Event Log Receiver which tails and parses logs from windows event log API using the **opentelemetry-log-collection library**.
 The Windows EventLog (EVTX) format is XML and is used by Microsoft Windows, as of Windows Vista, to store system log information. The EVTX format supersedes the Windows EventLog (EVT) format as used in Windows XP.
 
-By default i'm not receiving the desired field extractions, I haven't got time to dive into potential parsers out there and haven't build any myself (yet). For a quick win and to get started the following regex for OPAL can be used:
+By default i'm not receiving the desired field extractions, i'm not aware of any potential wineventlog parsers out there and haven't build any myself (yet). 
+Currently out of the box the entire windows event is in the body of the Log entry:
+![image](https://github.com/user-attachments/assets/fcdde86e-4465-4b8c-9412-aab97384b031)
+
+For a quick win and to get started with interacting with eventlog data, extract fields with the following regex for OPAL syntax:
 ```
 extract_regex Body, /"channel":"(?P<channel>[^"]+)"/
 extract_regex Body, /"level":"(?P<level>[^"]+)"/
@@ -119,6 +123,8 @@ extract_regex Body, /"Source Network Address":"(?P<src_ip>[^"]+)"/
 extract_regex Body, /(?P<ip_address>(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))/
 ```
 
+Reference #1: https://github.com/open-telemetry/opentelemetry-log-collection/blob/main/docs/types/field.md 
+Reference #2: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.110.0/receiver/windowseventlogreceiver 
 
 ## Dashboarding
 Dashboards are a convenient way to visualize important data in one place.
