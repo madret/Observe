@@ -7,7 +7,7 @@ Observe ingests event data using datastreams. Once ingested, all event data asso
 ## Datasets
 Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data. Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data.
 
-# Goal: Introduction in building a Observe intance with SIEM capabilities
+# Goal: Building an Observe intance with SIEM capabilities
 
 ## Requirements
 - Setup free Observe trial: https://account.observeinc.com/
