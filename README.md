@@ -20,6 +20,8 @@ The key concepts of Observe, according to the documentation, are enabling the fo
 - Installing Observe applications.
 - Using the Dataset Graph feature to understand datasets and the relationships between them.
 
+Read more: https://www.observeinc.com/about-us/
+
 ![architecture-diagram](https://github.com/user-attachments/assets/f0645406-c834-4cc2-8728-e857cc2831cb)
 
 
