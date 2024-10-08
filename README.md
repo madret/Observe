@@ -12,7 +12,7 @@ Datasets are much like tables in a database. They consist of rows and columns of
 ## Requirements
 - Setup free Observe trial: https://account.observeinc.com/
 
-## Host quickstart
+## 1. Host quickstart
 The Host Quick Start Integration is the simplest way to start monitoring your Linux and Windows endpoints in Observe. It is designed to quickly surface logs and metrics information in our Log and Metric explorers.
 The package uses the Observe Agent for Linux and Windows, and OpenTelemetry Collector with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
 The install is designed to be simple and light weight to simplify the process.
@@ -25,18 +25,19 @@ Observe helps you quickly start monitoring the health and activity of your serve
 - A simple home dashboard that shows high level logs and metrics with links to our log, metric and resource explorers.
 - A simple health dashboard to monitor the health of the otelcol agent installed on your server.
 
-## Install observe agent
+## 2. Install observe agent
 Scope: Windows OS
 
-### Windows Install
+### WINOS Install
 Install the observe-agent package via the provided installation powershell script. This script needs to be run in a powershell terminal that you run as administrator. Replace `OBSERVE_TOKEN` and `OBSERVE_COLLECTION_ENDPOINT` with the appropriate values and run on each host.
 
-[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"
-Check Status
-Get-Service ObserveAgent
+`[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"`
+
+#### Check Status
+`Get-Service ObserveAgent
 Set-Location "${Env:Programfiles}\Observe\observe-agent"
-PS C:\Program Files\Observe\observe-agent> ./observe-agent status
-Uninstall:
-Stop-Service ObserveAgent
-Remove-Item -Recurse "${Env:Programfiles}\Observe"
+PS C:\Program Files\Observe\observe-agent> ./observe-agent status`
+#### Uninstall:
+`Stop-Service ObserveAgent
+Remove-Item -Recurse "${Env:Programfiles}\Observe"`
 
