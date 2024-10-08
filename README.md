@@ -12,3 +12,15 @@ Datasets are much like tables in a database. They consist of rows and columns of
 ## Requirements
 - Setup free Observe trial: https://account.observeinc.com/
 
+## Host quickstart
+The Host Quick Start Integration is the simplest way to start monitoring your Linux and Windows servers in Observe. It is designed to quickly surface logs and metrics information in our Log and Metric explorers.
+The package uses the Observe Agent for Linux and Windows, and OpenTelemetry Collector with the Open Telemetry Host Metrics Receiver and the Open Telemetry File Log Receiver for MacOS to ship common logs and metrics from the host you wish to monitor.
+The install is designed to be simple and light weight to simplify the process.
+The instructions are located in a public git hub repository and are also provided (with pre-populated parameters to make it work for your Observe instance) within the Configuration panel of our UI based install for the app. 
+
+Observe helps you quickly start monitoring the health and activity of your servers with the following features:
+- A logs dataset (Logs) with log files being shipped from your host.
+- A metrics dataset (Metrics) with common host metrics collected from your host.
+- A resource dataset (Source) to quickly show you the hosts your are monitoring that links to associated logs and metrics.
+- A simple home dashboard that shows high level logs and metrics with links to our log, metric and resource explorers.
+- A simple health dashboard to monitor the health of the otelcol agent installed on your server.
