@@ -28,8 +28,7 @@ Observe helps you quickly start monitoring the health and activity of your serve
 ## 2. Install observe agent
 - Scope: Windows OS
 
-The Observe agent can also be installed installed on Linux and MACOS but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
-The Observe Agent, built on OpenTelemetry Collector, runs on your hosts and in your architecture to collect logs, metrics, traces, and events and sends them to Observe.
+The Observe agent, built on OpenTelemtry Collector can also be installed on Linux and MACOS but i'm focussing on the Windows installation. Install the agent on the desired endpoint (e.g. server, windows VM, etc).
 
 #### System requirements (WINOS)
 Port 8888 should be open for HTTP connections from localhost (network access is not required). This port is used by the agent to monitor itself and the status command will not work if it is blocked.
