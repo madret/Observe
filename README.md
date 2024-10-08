@@ -31,13 +31,14 @@ Scope: Windows OS
 ### WINOS Install
 Install the observe-agent package via the provided installation powershell script. This script needs to be run in a powershell terminal that you run as administrator. Replace `OBSERVE_TOKEN` and `OBSERVE_COLLECTION_ENDPOINT` with the appropriate values and run on each host.
 
-`[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"`
+```[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"```
 
 #### Check Status
 ```Get-Service ObserveAgent
 Set-Location "${Env:Programfiles}\Observe\observe-agent"
 PS C:\Program Files\Observe\observe-agent> ./observe-agent status```
+
 #### Uninstall:
-`Stop-Service ObserveAgent
-Remove-Item -Recurse "${Env:Programfiles}\Observe"`
+```Stop-Service ObserveAgent
+Remove-Item -Recurse "${Env:Programfiles}\Observe"```
 
