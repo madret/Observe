@@ -34,9 +34,9 @@ Install the observe-agent package via the provided installation powershell scrip
 `[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"; Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/observeinc/observe-agent/main/scripts/install.ps1" -outfile .\install.ps1; .\install.ps1 -observe_token "${OBSERVE_TOKEN?}" -observe_collection_endpoint "${OBSERVE_COLLECTION_ENDPOINT?}"`
 
 #### Check Status
-`Get-Service ObserveAgent
+```Get-Service ObserveAgent
 Set-Location "${Env:Programfiles}\Observe\observe-agent"
-PS C:\Program Files\Observe\observe-agent> ./observe-agent status`
+PS C:\Program Files\Observe\observe-agent> ./observe-agent status```
 #### Uninstall:
 `Stop-Service ObserveAgent
 Remove-Item -Recurse "${Env:Programfiles}\Observe"`
