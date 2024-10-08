@@ -78,6 +78,8 @@ PS C:\Program Files\Observe\observe-agent> ./observe-agent status
 Remove-Item -Recurse "${Env:Programfiles}\Observe"
 ```
 
+Observe agent github: https://github.com/observeinc/observe-agent
+
 ## 3. Explore and verify Log ingestion
 Log Explorer displays a list of available Log Datasets logs. If you don’t see the desired Datasets, use the **Search** function to locate it.
 The left menu also displays a list of **Filters** to use with the currently selected **Logs dataset**. When you select a Filter, the Filter appears in the **Query Builder**.
