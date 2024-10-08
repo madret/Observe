@@ -7,6 +7,9 @@ Observe ingests event data using datastreams. Once ingested, all event data asso
 ## Datasets
 Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data. Datasets are much like tables in a database. They consist of rows and columns of specific types. They can be linked, joined, and aggregated to derive insights. But unlike traditional tables, datasets automatically grow as Observe collects new data.
 
+![architecture-diagram](https://github.com/user-attachments/assets/f0645406-c834-4cc2-8728-e857cc2831cb)
+
+
 # Goal: Building an Observe intance with SIEM capabilities
 
 ## Requirements
@@ -36,7 +39,7 @@ The Observe Agent for WINOS supports x86_64 and arm64 architectures and the foll
 - Windows Server 2016+
 - Windows 10
 
-### WINOS Install process
+### WINOS Installation script
 Install the observe-agent package via the provided installation powershell script. This script needs to be run in an elevated prompt (run as administrator). Replace `OBSERVE_TOKEN` and `OBSERVE_COLLECTION_ENDPOINT` with the appropriate values and run on each host.
 
 ```
@@ -53,3 +56,5 @@ PS C:\Program Files\Observe\observe-agent> ./observe-agent status
 ```Stop-Service ObserveAgent
 Remove-Item -Recurse "${Env:Programfiles}\Observe"
 ```
+
+## 
