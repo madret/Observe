@@ -123,7 +123,7 @@ extract_regex Body, /"event_id":\{"id":(?P<event_id>\d+)/
 extract_regex Body, /"Caller Process Name":"(?P<caller_process_name>[^"]+)"/
 extract_regex Body, /"keywords":\[(?P<keywords>[^\]]+)\]/
 extract_regex Body, /"Source Network Address":"(?P<src_ip>[^"]+)"/
-extract_regex Body, /(?P<ip_address>(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))/
+extract_regex Body, /(?P<ip_address>(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))/
 ```
 
 - Reference #1: https://github.com/open-telemetry/opentelemetry-log-collection/blob/main/docs/types/field.md
